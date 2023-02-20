@@ -7,6 +7,17 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentcontainer"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/bottom_nav_graph"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        ></androidx.fragment.app.FragmentContainerView>
+
+
+
     <TextView
         android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"
@@ -25,5 +36,12 @@
 
         android:text="LOGOUT"
         />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomnav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"/>
 
 </RelativeLayout>
